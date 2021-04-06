@@ -1,0 +1,18 @@
+nacos:
+  url: 127.0.0.1:8848
+  namespace: d3df295d-2733-420a-bc01-710b7f32de73
+
+server:
+  port: 9000
+spring:
+  application:
+    name: register-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: ${nacos.namespace}
+        group: CENTER
+logging:
+  level:
+    root: info
